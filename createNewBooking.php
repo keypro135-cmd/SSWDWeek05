@@ -1,4 +1,6 @@
 <?php 
+// Member ID 13 and Court ID 15 do not exist in the database.
+// The booking cannot be created because of foreign key constraints.
 
 $mid = $_POST['memberID']; 
 $cid = $_POST['courtID']; 
@@ -10,14 +12,13 @@ include("dbcon.php");
 
 $sql = "insert into booking(memberid,courtid,bookingDate,starttime,endtime) values ('$mid','$cid','$bd','$st','$et')";
 
-echo $sql;
-/*
+// echo $sql;
+
 if (mysqli_query($conn, $sql)) {
-  echo "<br>New record created successfully";
+    echo "<br>New record created successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-*/
 
 mysqli_close($conn); 
 ?>

@@ -1,12 +1,35 @@
-<html>
-    <body>
-        <form method="POST" action="createNewBooking.php">
- 	    Members ID: <input type="text" name="memberID " /> <br/>
-	    Courd ID: <input type="text" name="courtID" /> <br/>
-            Booking Date: <input type="date" name="bookingDate"/><br>
-            Start Time: <input type="time" name="startTime"/><br>
-            End Time: <input type="time" name="endTime"/><br>
-            <input type="submit">
-        </form>
-    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Tennis Booking</title>
+</head>
+<body>
+    <h2>New Tennis Court Booking</h2>
+
+    <form method="POST" action="createNewBooking.php">
+        <label for="memberID">Member ID:</label>
+        <input type="number" id="memberID" name="memberID" required>
+        <br><br>
+
+        <label for="courtID">Court ID:</label>
+        <input type="number" id="courtID" name="courtID" required>
+        <br><br>
+
+        <label for="bookingDate">Booking Date:</label>
+        <input type="date" id="bookingDate" name="bookingDate" required>
+        <br><br>
+
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" required>
+        <br><br>
+
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime" required>
+        <br><br>
+
+        <input type="submit" value="Submit Booking">
+    </form>
+</body>
 </html>
